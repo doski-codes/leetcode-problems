@@ -34,13 +34,17 @@ def reverse(x):
     num = 0
     signed = False
 
+    # Check if a number is signed(negative) and convert it to a positive number
     if x < 0:
         x = x * -1
         signed = True
 
     while x:
+        # Get the last digit in x
         value = x % 10
+        # Floor division by 10 to get remove the last digit from x
         x = x // 10
+        # Add value to the end of num
         num = (num * 10) + value
 
     if signed:
