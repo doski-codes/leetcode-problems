@@ -36,7 +36,7 @@ def isPalindrome(x):
     if (x == 0):
         return True
 
-    # Return false if number is negative
+    # Return false if number is negative or a multiple of 10
     if (x < 0 or (x % 10) == 0):
         return False
 
