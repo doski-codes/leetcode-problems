@@ -33,8 +33,11 @@ Constraints:
 def isPalindrome(x):
     num = 0
 
+    if (x == 0):
+        return True
+
     # Return false if number is negative
-    if (x < 0):
+    if (x < 0 or (x % 10) == 0):
         return False
 
     # Divide number(x) into two halves then compare them
