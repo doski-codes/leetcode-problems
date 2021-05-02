@@ -34,6 +34,9 @@ def reverse(x):
     num = 0
     signed = False
 
+    if x == 0:
+        return True
+
     # Check if a number is signed(negative) and convert it to a positive number
     if x < 0:
         x = x * -1
