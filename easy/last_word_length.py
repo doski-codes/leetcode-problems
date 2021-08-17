@@ -36,12 +36,17 @@ def lengthOfLastWord(s):
     runSum = 0
 
     for letter in s:
+        # If the element from the loop is a space make runSum 0 (stop the count)
+        # Then continue the loop from the next element
         if letter == " ":
             runSum = 0
             continue
 
+        # Increment runSum by one if the element from the loop is a letter
         runSum += 1
-        
+
+        # Assign runSum to lastSum so that we can have the value for the length
+        # of the last word at the end of the loop
         lastSum = runSum
 
     return lastSum

@@ -31,11 +31,16 @@ def maxSubArray(nums):
     runningSum = 0
 
     for num in range(len(nums)):
+        # Add the value of the element from the loop to runningSum
         runningSum += nums[num]
 
+        # If maxSum is None (for the first iteration) or there's a new largest sum
+        # (runningSum > maxSum) change the maxSum
         if maxSum is None or runningSum > maxSum:
             maxSum = runningSum
 
+        # If the runningSum becomes negative start the sum over again with the
+        # value from the next element in the array
         if runningSum < 0:
             runningSum = 0
 

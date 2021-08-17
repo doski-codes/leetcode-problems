@@ -34,13 +34,20 @@ def plusOne(digits):
     size = len(digits)
     rem = 1
 
+    # Loop through array from the last element to the first
     for idx in reversed(range(size)):
+        # Add 1 to the element from the array for the first run then the carry value
+        # for the subsequent iterations
         num = digits[idx]
+        # Let the new value of the element in the array be a number between 0 & 9
+        # after adding the remainder
         digits[idx] = (digits[idx] + rem) % 10
         rem = (num + rem) // 10
 
+    # Insert the remainder into the beginning of the array if the remainder after
+    # the loop is greater than 0 (the largest value possible for rem is 1)
     if rem: digits.insert(0, rem)
-    
+
     return digits
 
 def main():
